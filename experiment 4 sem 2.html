@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<head>
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+    <div class="box">
+      <h2>Result Calculator</h2>
+      <h3>Enter the number of subjects</h3>
+      <input id="in"><br>
+      <button id="myBut">Calculate Resutl</button>  
+      <div id="text"></div>
+    </div>
+    </div>
+</body>
+</html>
+<style>
+body{
+    background-color: hsl(210, 20%, 92%);
+}
+
+.box{
+   width: 330px;
+   display: flex;
+   height: auto;
+   background-color: hsl(200, 70%, 85%);
+   flex-direction: column;
+   justify-content: center;
+   text-align: center;
+   padding: 20px;
+   border-radius: 15px;
+   border: 2px solid hsl(210, 15%, 40%);
+}
+
+.container{
+    display: flex;
+    justify-content: center;
+    margin-top: 60px;
+}
+
+#myBut{
+     background-color: hsl(240, 80%, 50%);
+     color: hsl(0, 0%, 100%);
+     border-radius: 20px;
+     cursor: pointer;
+     padding: 10px;
+     font-size: 1.2rem;
+}
+
+#myBut:hover{
+        background-color: hsl(240, 80%, 60%);
+}
+
+#myBut:active{
+        background-color: hsl(240, 80%, 70%);
+}
+</style>
+
+
+ <script>
+let n;
+let grade;
+let result;
+let total=0;
+let average;
+document.getElementById("myBut").onclick=function(){
+    n=Number(document.getElementById("in").value);
+    for(let i=1;i<=n;i++){
+       total=total+parseFloat(prompt("Enter marks for Subject :"+i));
+    }
+    average=total/n;
+    result=average>33?"PASS":"FAIL";
+    if(average>50){
+       grade="A";
+    }
+    else{
+       grade="-A";
+    }
+    document.getElementById("text").innerHTML="Grade="+grade+"<br>"+"Result="+result;
+}
+    </script>
