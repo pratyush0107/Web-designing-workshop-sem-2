@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<head>
+    <title>Document</title>
+
+</head>
+<body>
+    <div class="container">
+    <div class="box">
+        <h1 style="margin-top: 20px;" id="head">Welcome to Javascript</h1>
+      <input id="name" class="in" placeholder="Type Heading" ><br>
+      
+      <button class="myBut" onclick="changeHead()">Change Heading Text</button><br>
+      <button class="myBut" id="colorBtn">Random Background Color</button>
+      <button class="myBut" onclick="increFont()">Increase font size</button>
+      <button class="myBut" onclick="decreFont()">decrease font size</button>
+      <button class="myBut"  id="show" onclick="change()">Show  Paragraph</button><br>
+      <button class="myBut" onclick="res()">Reset</button>
+      <div id="output">JavaScript is a powerful programming language used to make web pages interactive and dynamic. While HTML provides the structure of a webpage and CSS controls its appearance, JavaScript adds behavior and functionality.</div>
+    </div>
+    </div>
+    
+</body>
+</html>
+<style>
+    body{
+    background-color: hsl(210, 20%, 92%);
+}
+
+.box{
+   width: 700px;
+   height: auto;
+   background-color: hsl(200, 60%, 88%);
+   justify-content: center;
+   text-align: center;
+   border-radius: 30px;
+   border: 2px solid hsl(210, 15%, 35%);
+   box-shadow: 0 10px 20px hsl(210, 15%, 60%);
+}
+
+.container{
+    display: flex;
+    justify-content: center;
+    margin-top: 60px;
+}
+
+.myBut{
+     background-color: hsl(210, 80%, 35%);
+     color: hsl(0, 0%, 100%);
+     border-radius: 20px;
+     cursor: pointer;
+     margin-top: 10px;
+     padding: 8px 16px;
+}
+
+.myBut:hover{
+        background-color: hsl(210, 80%, 45%);
+}
+
+.myBut:active{
+        background-color: hsl(210, 80%, 55%);
+}
+
+.in{
+    margin-top: 10px;
+    padding: 10px;
+    font-size: 1.25rem;
+    border-radius: 10px;
+    border: 1px solid hsl(210, 15%, 60%);
+    background-color: hsl(0, 0%, 100%);
+}
+
+button{
+    font-size: 1.5rem;
+}
+#output{
+    display: none;
+    font-size: 16px;
+
+}
+</style>
+<script>
+    let size=16;
+function changeHead(){
+    if(document.getElementById("name").value!="")
+    document.getElementById("head").textContent=document.getElementById("name").value;
+    document.getElementById("name").value="";
+}
+function randomBackgroundColor() {
+    const r = Math.floor(Math.random() * 256);
+    const g = Math.floor(Math.random() * 256);
+    const b = Math.floor(Math.random() * 256);
+
+    const randomColor = rgb($(r), $(g), $(b));
+    document.body.style.backgroundColor = randomColor;
+}
+document.getElementById("colorBtn").addEventListener("click", randomBackgroundColor);
+
+function decreFont(){
+    
+    size-=2;
+    document.getElementById("output").style.fontSize=size +"px";
+}
+function increFont(){
+
+    size+=2;
+    document.getElementById("output").style.fontSize=size +"px";
+}
+
+function change(){
+    const text = document.getElementById("output");
+    const btn = document.getElementById("show");
+
+    if(text.style.display === "none"){
+        text.style.display = "block";
+        btn.textContent = "Hide Paragraph";
+    }
+    else{
+        text.style.display = "none";
+        btn.textContent = "Show Paragraph";
+    }
+}
+
+function res(){
+    size = 16;
+    document.body.style.backgroundColor = "";
+    document.getElementById("output").style.fontSize = "16px";
+    document.getElementById("head").textContent = "Welcome to Javascript";
+    document.getElementById("output").style.display="none";
+}
+</script>
