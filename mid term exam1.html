@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="background">
+    <div class="evenodd">
+        <h1>EVEN OR ODD</h1>
+        <input type="number" id="input"><br><br><br><br>
+        <button class="check" >check number is even or odd</button>
+
+    </div>
+    <div id="result"></div>
+    </div>
+    <style>
+        .background{
+            height: 500px;
+            background-color: cadetblue;
+            width: 500px;
+            margin-left: 470px;
+            border-radius: 20%;
+            text-align: center;
+        }
+        .evenodd{
+            margin-top: 100px;
+            padding-top: 80px;
+        }
+        .check{
+            background-color: cyan;
+            height: 100px;
+            border-radius: 30%;
+            font-size: 20px;
+        }
+    </style>
+
+    <script>
+        
+        document.querySelector(".check").onclick = function () {
+            let n = document.getElementById("input").value;
+            n = Number(n);
+            if (isNaN(n)) {
+                document.getElementById("result").innerHTML = "Please enter a valid number.";
+                return;
+            }
+            if (n % 2 === 0) {
+                document.getElementById("result").innerHTML = n + " is even";
+            } else {
+                document.getElementById("result").innerHTML = n + " is odd";
+            }
+        };
+    </script>
+</body>
+</html>
