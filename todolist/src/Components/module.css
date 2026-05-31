@@ -1,0 +1,170 @@
+
+.box img{
+    height: 150px;
+    width : 250px;
+    border: 2px solid;
+    margin-top: 7px;
+    margin-bottom: 10px;
+}
+.box{
+    text-align: center;
+    max-width: 500px;
+    border:5px,solid;
+    font-family: Arial, Helvetica, sans-serif;
+    margin-left: 50px; 
+    margin-top: 50px;
+}
+.box p{
+    font-size: 20px;
+}
+.homepage{
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+.listmenu{
+    background-color: grey;
+    color: aliceblue;
+    margin-top: 20px;
+    display: inline-block;
+    border: 3px , solid;
+    width: 300px;
+    text-align: center;
+    justify-content: space-between;
+}
+.button{
+    margin-top: 50px;
+    background-color: bisque;
+}
+.counter-container{
+    text-align: center;
+    padding: 20px;
+    margin: 15px;
+    border: 2px solid rgba(203, 197, 197, 0.829);
+    box-shadow: 10px 10px 10px  gray;
+    max-width: 400px;
+    border-radius: 10px;
+}
+.counter-container button{
+    background-color: cornflowerblue;
+    color: black;
+    border-radius: 2px;
+    margin-right: 10px;
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+.counter-container button:hover{
+    background-color: aliceblue;
+    cursor: pointer;
+    box-shadow: 2px 2px black;
+}
+.input-b0x{
+    display: flex;
+    flex-direction: row;
+    border: 2px solid;
+    border-radius: 5px;
+    width: 100%;
+    gap: 50px;
+    height: 200px;
+
+}
+.input-b0x input{
+    height: 50px
+}
+.input-b0x select{
+    height: 50px
+}
+.color-box{
+    height: 250px;
+    width: 250px;
+    align-items: center;
+}
+.display-color-box{
+    height: 200px;
+    width: 200px;
+    border-radius: 6px;
+    border: 1px solid;
+    text-align: center;
+    margin-left: 640px;
+}
+
+.select{
+    margin-left: 640px;
+}
+.todolist{
+text-align: center;
+background-color: aquamarine;
+max-width: 400px;
+border-radius: 10px;
+color: gray;
+padding: 10px;
+margin-left: 100px;
+}
+.todolist button{
+    border-radius: 5px;
+    background-color: red;
+    color: rgba(41, 10, 10, 0.504);
+    margin: 5px;
+}
+.todolist li{
+ background-color: aliceblue;
+    margin-top: 10px;
+    border: 2px solid black;
+    color: black;
+    font-size: 20px;
+    border-radius: 10px;
+    padding: 5px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    word-break: break-word;
+}
+.btns{
+    display: flex;
+    gap: 5px;
+    flex-shrink: 0;
+}
+.clock-container{
+    background-image: url(https://cdn.photoroom.com/v2/image-cache?path=gs://background-7ef44.appspot.com/backgrounds_v3/calming/49_calming.jpg);
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    height: 250px;
+    align-items: center;
+    width: 250px;
+    margin-left: 200px;
+    border-radius: 50%;
+}
+.clock{
+    text-align: center;
+    padding: 20px;
+    margin-top: 80px;
+    font-weight: 500;
+    font-style: italic;
+    backdrop-filter: blur(1px);
+
+}
+.stopwatch{
+    border: 2px solid;
+    text-align: center;
+    max-width: 500px;
+    height: 200px;
+    margin-top: 50px;
+    margin-left: 50px;
+    border-radius: 20px;
+}
+.stopwatch .displaywatch {
+  margin-top: 40px;
+  font-family: monospace;
+  text-shadow: 2px 2px 2px   hsla(0, 0%, 80%, 1);
+  color: hsla(0, 0%, 0%, 0.5);
+  padding: 20px;
+}
+.controls button{
+ margin: 5px;
+ margin-right: 5px;
+ border:none;
+ width: 100px;
+ border-radius: 5px;
+ font-family:'Courier New', Courier, monospace;
+ font-weight: 200;
+ cursor: pointer;
+}
